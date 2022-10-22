@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b90637cb.css",
+    "main.js": "/static/js/main.bf65be3e.js",
+    "static/js/787.5a10c08b.chunk.js": "/static/js/787.5a10c08b.chunk.js",
+    "static/media/bg-main-desktop.png": "/static/media/bg-main-desktop.806e7aa7b4dbc1d78bc3.png",
+    "static/media/bg-card-back.png": "/static/media/bg-card-back.23f68fa3aa3d5b33dfc8.png",
+    "static/media/bg-card-front.png": "/static/media/bg-card-front.8153e2ca184402a8385f.png",
+    "index.html": "/index.html",
+    "main.b90637cb.css.map": "/static/css/main.b90637cb.css.map",
+    "main.bf65be3e.js.map": "/static/js/main.bf65be3e.js.map",
+    "787.5a10c08b.chunk.js.map": "/static/js/787.5a10c08b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b90637cb.css",
+    "static/js/main.bf65be3e.js"
+  ]
+}
