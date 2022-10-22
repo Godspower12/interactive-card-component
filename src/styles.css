@@ -1,0 +1,404 @@
+:root {
+    --primary-color:#ccd1e4;
+  }
+  
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+     
+    .app {
+      height: 100%;
+      overflow: hidden;
+     
+    }
+  /* body {
+    
+  } */
+  
+    
+  
+    /* all-contents */
+    .content-container {
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .contents {
+      display: flex;
+      flex-direction: column;
+      
+    }
+    
+    .contents > button {
+      cursor: pointer;
+      background: black;
+      color: white;
+      font-size: large;
+      border-radius: 10px;
+    
+    }
+    
+    .contents > button:hover {
+      background: white;
+      color: black;
+    }
+    
+    
+    
+    .register {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      z-index: 200;
+      top: 10%;
+      
+    }
+    
+    .reg-form {
+      transition: all 0.8s ease-in;
+    
+    }
+    
+    .show {
+      display: block;
+      transform: translateX(0%);
+    }
+    
+    .hide {
+      display: none;
+    }
+    
+  
+  
+    /* footer */
+  
+    .footer {
+      display: fixed;
+      position: relative;
+      background: black;
+      color: white;
+      padding: 20px;
+      display: flex;
+      height: 100%;
+      margin-top: 30px;
+      justify-content: space-around;
+      overflow: hidden;
+      bottom: 0%;
+  }
+  
+  .policy-list li {
+    list-style: none;
+    color: grey;
+    font-size: large;
+    cursor: pointer;
+  }
+  
+  .policy-list li:hover {
+      color: white;
+  }
+  
+  
+  
+  @media screen and (max-width: 1100px) {
+    .menu {
+      margin-left: 100px;
+    }
+    .card {
+      width: 25%;
+      text-align: center;
+    }
+    .checkout-details {
+      max-width: 80%;
+      /* background: red; */
+      justify-content: space-between;
+    }
+    .customer-details {
+      max-width: 50%;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .menu {
+      margin-left: 50px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .menu {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (max-width: 860px) {
+    .menu {
+     display: none;
+    }
+    .hamburger-container {
+      display: block;
+    }
+  
+  }
+  @media screen and (max-width: 600px) {
+    .card {
+      width: 35%;
+      text-align: center;
+    }
+    .slider-container {
+      height: 40vh;
+    }
+    
+    .slide-image {
+      width: 100%;
+      height: 100%;  
+      object-fit: cover;
+    }
+  
+    .prev, .next {
+      font-size: 80%;
+   
+      align-items: center;
+      margin-top: 0.1px;
+      
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .card {
+      width: 40%;
+      text-align: center;
+    }
+    .slider-container {
+      height: 30vh;
+    }
+    
+    .slide-image {
+      width: 100%;
+      height: 100%;  
+      object-fit: cover;
+    }
+    .prev, .next {
+      font-size: 80%;
+      padding: 0.5rem;
+      align-items: center;
+      margin-top: 0.1px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .card {
+      width: 60%;
+      text-align: center;
+    }
+    .slide-image {
+      width: 100%;
+      height: 100%;  
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 350px ), (max-width: 300px ) {
+   
+    .slide-image {
+      width: 100%;
+      height: 100%;  
+      object-fit: cover;
+    }
+    .btn-checkout {
+      padding: 0%;
+    }
+  }
+  
+  
+  /* Hamburger menu */
+  
+  .container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    display: none;
+    height: 100vh;
+  }
+  
+  
+  @media screen and (max-width: 860px) {
+    .container {
+      display: block;
+    }
+  
+  
+    .reg {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .hamburger-btn-reg, .hamburger-btn-login, .hamburger-btn-cart{
+       border-radius: 10px;
+       margin-bottom: 5px;
+       cursor: pointer;
+       padding: 2px
+    }
+    .hamburger-btn-reg:hover, .hamburger-btn-login:hover, .hamburger-btn-cart:hover{
+       background: blue;
+       color: white
+      
+    
+    }
+  }
+  
+  
+  .checkbox {
+    left: 10px;
+    top: 10px;
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    z-index: 4;
+    cursor: pointer;
+    
+  }
+  
+  .hamburger {
+    left: 10px;
+    top: 10px;
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  
+  
+  .hamburger > div {
+    position: relative;
+    width:100%;
+    height: 2px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    
+  }
+  
+  .hamburger > div::before, .hamburger > div::after {
+    position:absolute;
+    content: '';
+    background: inherit;
+    top: -10px;
+    width:100%;
+    height: 2px;
+  }
+  .hamburger > div::after {
+    top: 10px;
+  }
+  
+  .checkbox:checked ~ .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+  .checkbox:checked ~ .hamburger > div::before, .checkbox:checked ~ .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  
+  .checkbox:checked:hover ~ .hamburger > div {
+    transform: rotate(225deg);
+  }
+  .checkbox:checked ~ .menus {
+    visibility: visible;
+    transform: translateX(0%);
+    transition-duration: 1.75s;
+    
+  }
+  .checkbox:checked ~ .menus > div {
+     transform: translateX(0%);
+     
+    }
+    .checkbox:checked ~ .menus > div > div {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+  
+  
+  
+  
+    .menus {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+       visibility: hidden; 
+       display: flex;
+      align-items: center;
+      transform: translateX(-100%);
+      z-index: 2;
+    }
+    
+    
+    .menus > div {
+      background: rgba(24,39,59,0.85);
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex: none;
+      transform: translateX(-100%);
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      
+    } 
+    
+    .menus > div > div {
+      display: flex;
+      background: rgba(24,39,59,1);
+      transform: translateX(-100%);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      
+      width: 90%; 
+      height: inherit; 
+       opacity: 0;
+      transition: all 0.5s ease-in-out;
+    } 
+    
+    .menus > div > div> ul > li {
+      list-style: none;
+      font-size: 2rem;
+      padding: 1rem;
+    } 
+    
+     .menus > div > div> ul > li > a{
+     color: white;
+      text-decoration: none;
+    }
+    
+  
+  
+  
+  
+  
+  @media screen and (max-width: 550px) {
+    .checkbox, .hamburger {
+    width: 40px;
+    height: 40px;
+    }
+    .hamburger > div, .hamburger > div::before, .hamburger > div::after {
+      height: 1px;
+    }
+  }
+  
+  

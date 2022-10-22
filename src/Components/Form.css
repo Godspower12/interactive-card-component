@@ -1,0 +1,344 @@
+
+.main-card {
+   display: flex;
+}
+
+.card-section {
+ margin-top: 5%;
+ margin-left: 10%;
+
+}
+.hard-card {
+   width: 25%;
+   position: absolute;
+   height: 30%;
+   margin-left: 5%;
+   border-radius: 5px;
+}
+.hard-card > img {
+   z-index: 1;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   border-radius: 5px;
+}
+
+.hard-card > .circles {
+   /* display: absolute; */
+   z-index: 2;
+   width: 50%;
+   height: 30%;
+   margin-top: 10px;
+   display: flex;
+   margin-left: 20px;
+   align-items: center;
+   padding: 0px 5px;
+}
+.hard-card > .circles> .big-circle {
+   z-index: 2;
+   background: white;
+   width: 25%;
+   height: 60%;
+   border-radius: 50%;
+   margin-right: 5px;
+}
+.hard-card > .circles> .small-circle {
+   z-index: 2;
+   width: 10%;
+   height: 30%;
+   border-radius: 50%;
+   border: 1px solid white;
+}
+
+.number  {
+   position: absolute;
+   z-index: 2;
+   margin-top: 30px;
+   color: white;
+   margin-left: 30px;
+}
+.bottom {
+   position: absolute;
+   z-index: 2;
+   width: 90%;
+   margin-top: 25%;
+   display: flex;
+   justify-content: space-between;
+   color: white;
+   margin-left: 20px;
+}
+.hard-card-back {
+   background: rgb(235, 229, 229);
+   width: 25%;
+   position: absolute;
+   height: 30%;
+   margin-left: 10%;
+   margin-top: 18%;
+   border-radius: 5px;
+}
+
+.hard-card-back > img {
+   z-index: 1;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   border-radius: 5px;
+}
+.hard-card-back > .cvv-container {
+   height: 100%;
+   width: 95%;
+   position: absolute;
+   z-index: 2;
+   margin-top: 90px;
+}
+.hard-card-back .cvv-container h4 {
+   width: inherit;
+   display: flex;
+   justify-content: right;
+   color: white;
+}
+.message {
+   margin-top: 10px;
+   color: rgb(56, 54, 54);
+   text-align: center;
+}
+.background {
+position: absolute;
+width: 35%;
+height: 100vh
+}
+
+.background img {
+   width: 100%;
+   height: 100vh
+}
+
+.form-card {
+   
+    width: 100%;
+   
+    margin: 10% 0px;
+}
+
+.main-input {
+   display: flex;
+   flex-direction: column;
+   margin-top:5% ;
+   width: 30%;
+   padding: 40px;
+  margin-left: 45%;
+  transform: translateX(from -50% t0 0%);
+  transition: all 0.5s ease-in-out;
+}
+
+
+
+.card-name, 
+.card-number, 
+.expcvv
+ {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 20px;
+   
+}
+.card-name input, 
+.card-number input, 
+.cvv input, .exp-year input, .exp-month input
+{
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.card-name input:active {
+   border: 5px solid linear-gradients(hsl(249, 99%, 64%) to hsl(278, 94%, 30%));
+}
+label {
+   margin-bottom: 5px;
+}
+
+.expcvv  {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+  
+}
+.expire {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 50%;
+} 
+.expire > div {
+   display: flex;
+}
+.expire .exp-month input {
+  width: 80% ; 
+}
+.expire .exp-year input {
+   width: 80% ; 
+}
+.cvvcard {
+   width: 50% ; 
+}
+.cvv {
+   display: flex;
+   flex-direction: column;
+}
+.cvv input {
+   width: 100% ; 
+   
+   
+}
+
+.btn {
+   width: 100%;
+   background: black;
+   color: white;
+    font-size: 16px;
+   padding: 5px 0px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.btn:hover {
+   background: rgba(136, 82, 98, 0.5);
+   color: black
+}
+.error {
+   margin-top: 5px;
+   display: none;
+  color: red;
+}
+
+ input:invalid[focused = "true" ] ~ .error {
+   display: block;
+}
+.card-details {
+   color: grey;
+}
+
+.complete svg {
+   align-items: center;
+   margin-bottom: 20px;
+   margin-left: 100px;
+}
+.complete h1 {
+   align-items: center;
+   margin-bottom: 20px;
+   margin-left: 70px;
+}
+.complete h3 {
+   align-items: center;
+   margin-bottom: 20px;
+   margin-left: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+      .card-section {
+         margin-top: 7%;
+      } 
+      .hard-card {
+         width: 30%;
+      }
+      .hard-card-back {
+         width: 30%;
+         margin-top: 20%;
+      }
+    
+
+
+      .main-input {
+         margin-left: 40%;
+         width: 35%;
+
+      }
+      .hard-card-back > .cvv-container {
+         margin-top: 80px;
+      }
+
+      .btn {
+         border-radius: 10px;
+         padding: 10px 0px;
+      }
+}
+
+
+
+@media screen and (max-width: 768px) {
+   .background {
+      width: 30%;
+   }
+   .hard-card {
+      margin-left: -5%;
+      width: 35%;  
+   }
+
+   .hard-card-back {
+      margin-left: 1%;
+      width: 35%;
+      margin-top: 30%;
+   }
+
+   .main-input {
+      margin-left: 33%;
+      width: 45%;
+   }
+   .bottom  {
+      margin-top: 25%;
+   }
+   
+}
+
+@media screen and (max-width: 425px) {
+   .main-card {
+      display: flex;
+      flex-direction: column;
+    }  
+    .background {
+      width: 100%;
+      height: 25%;
+    }
+   .background > img {
+      width: 100%;
+      height: 100%;
+   }
+    .main-input {
+      width: 90%;
+      margin-top: 60%;
+      margin-left: 0%;
+    }
+   .hard-card {
+         width: 70%;
+         margin-top: 100px;
+         z-index: 1;
+      }
+      .hard-card-back {
+         z-index: 0;
+         width: 70%;
+         margin-left: 2%;
+         margin-top: 1px;
+         
+      }
+}
+
+@media screen and (max-width: 375px) {
+   .card-section {
+     margin-top: 10% ;
+    }  
+   .hard-card {
+      
+      
+   }
+   .hard-card-back {
+     
+   }
+   .main-input {
+      margin-top: 80%;
+      width: 95%;
+     
+    }
+}
+
+
