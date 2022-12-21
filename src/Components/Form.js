@@ -31,7 +31,8 @@ const handleClick = () => {
   
 const handleChanges = (e) => {
   let val = e.target.value
- setCardNumber(val);
+  let spaceformart = val.replace(/\s/g, '').replace(/(.{4})/g, '$1 ').trim();
+ setCardNumber(spaceformart);
 }
 
 
@@ -71,6 +72,7 @@ const handleChanges = (e) => {
         errorMessage= "Please fill in card number"
         required 
         onchange = {handleChanges}
+        value = {cardNumber}
         />
        <div className="expcvv">
        <div className="expire">
